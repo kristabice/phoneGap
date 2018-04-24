@@ -1,0 +1,56 @@
+
+ * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+
+/* Portrait layout (default) */
+.app {
+    padding: 15px;
+ 
+}
+.app::after, .information::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.Header, .Footer{
+    padding: 20px;
+    background-color: #46819b;
+    color: white;
+}
+
+img{
+    width: 100%;
+}
+/* ----------- OVERRRIDE JQUERY MOBILE ---------- */
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+    color: white;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        padding: 15px;
+    }
+    .app::after, .information::after{
+        content: " ";
+        display: block;
+        clear: both;
+    }
+
+    .Header, .Footer{
+        padding: 20px;
+        background-color: #46819b;
+        color: white;
+    }
+    img{
+        width: 50%;
+    }
+
+    /* ----------- OVERRRIDE JQUERY MOBILE ---------- */
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
+    color: white;
+}
+}
