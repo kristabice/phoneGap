@@ -10,8 +10,7 @@
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" type="text/css" href="js/vendor/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
     <script type="text/javascript" src="js/vendor/jquery/jquery.js"></script>
@@ -292,8 +291,17 @@
             </header>
 
             <div class="app">
-                <h1>About Us</h1>
-                <p>I'd call you a genius, except I'm in the room. There was a war. A Time War. The Last Great Time War. My people fought a race called the Daleks, for the sake of all creation. And they lost. We lost. Everyone lost. They're all gone now. My family. My friends. Even that sky. You need to get yourself a better dictionary. When you do, look up 'genocide'. You'll find a little picture of me there, and the caption'll read 'Over my dead body'. Yeah? Well I'm the Lord of Time. There's something else I've always wanted to say: Allons-y, Alonso!</p>
+                <h1>April Quilt Along</h1>
+                <form method="get" action="">
+                        <fieldset class="ui-field-contain">
+                          <label for="num">Select Quilt Along Week:</label>
+                          <input type="range" name="num" id="num" value="3" min="1" max="4" />
+                        </fieldset>
+                      </form>
+                    
+                          <div id="week"></div>
+
+                   
             </div>
             <footer data-role="footer" data-position="fixed" data-fullscreen="true" class="menu">
                 <h1>&bull; This app was built by Krista Bice &bull;</h1>
@@ -317,18 +325,26 @@
     
                 <div class="app">
                     <div class="ui-content">
+                        <h1>Subscription Information:</h1>
                         <form method="get" action="">
                         <!-- forms have to have unique ids across your site -->
                         <label for="basicfield">Your Information:</label>
-                        <input type="text" name="basicfield" id="basicfield" value="" placeholder="Your Email"/>
+                        <input type="text" name="basicfield" id="basicfield" value="" placeholder="Your Email"/> <br />
                         <label for="username" class="ui-hidden-accessible">Your Name:</label>
                         <input type="text" name="username" id="username" value="" placeholder="Your Name"/>
-    
+                        <label for="basicfield">What type of emails do you want to recieve?</label>
                         <div class="ui-field-contain">
-                            <label for="address">Your Address:</label>
-                            <input type="text" name="address" id="address" value="" placeholder="Your Address"/>
+                            <label for="address">Quilt Patterns:
+                            <input type="radio" name="address" id="radio" value="patterns" /></label>
                         </div>
-    
+                        <div class="ui-field-contain">
+                            <label for="address">Quilt Alongs:
+                            <input type="radio" name="address" id="radio" value="along" /></label>
+                        </div>
+                        <div class="ui-field-contain">
+                            <input type="submit" value="SIGN-UP!" name ="submit" >
+                            </div>
+                        
                         </form>
                     </div>
                 </div>
@@ -340,7 +356,7 @@
     
     
         </section>
-<!-- ********************************* PAGE THREE ****************************************** -->
+<!-- ********************************* ABOUT US PAGE ****************************************** -->
 
     <section id="HomeScren" data-role="page">
             <header data-role="header" data-position="fixed" data-fullscreen="true" class="menu" >
